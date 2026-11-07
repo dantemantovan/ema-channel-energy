@@ -1,0 +1,26 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "APsystems EMA OpenAPI",
+        "description": "Uses one API call to validate. Afterwards about one call per day (~30/month) fetches the previous day's per-channel energy.",
+        "data": {"app_id": "App ID", "app_secret": "App Secret", "sid": "System ID (SID)", "ecu_id": "ECU ID"}
+      },
+      "reauth_confirm": {
+        "title": "Re-enter EMA OpenAPI credentials",
+        "data": {"app_id": "App ID", "app_secret": "App Secret"}
+      }
+    },
+    "error": {
+      "invalid_auth": "Credentials were rejected by the EMA OpenAPI.",
+      "cannot_connect": "Could not reach the EMA OpenAPI or got an unexpected response.",
+      "rate_limited": "The EMA OpenAPI quota or rate limit was reached. Try later.",
+      "invalid_id": "SID or ECU ID has an invalid format.",
+      "no_channels": "The API returned no channel data for yesterday."
+    },
+    "abort": {
+      "already_configured": "This SID/ECU is already configured.",
+      "reauth_successful": "Credentials updated."
+    }
+  }
+}
